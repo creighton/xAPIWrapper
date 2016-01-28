@@ -1,4 +1,9 @@
-(function(ADL) {
+(function(ADLobj) {
+    var ADL = ADLobj;
+    if (typeof window !== 'undefined') {
+        ADL = window.ADL = obj.ADL || {};
+    }
+    
     function Validator(obj) {};
 
     Validator.prototype.validateStatement = function(statement) {
@@ -861,5 +866,5 @@
     };
 
     ADL.Validator = Validator;
-}(window.ADL = window.ADL || {}));
+})(this);
 
