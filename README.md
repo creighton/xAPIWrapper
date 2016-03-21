@@ -1,4 +1,4 @@
-:) xAPIWrapper
+xAPIWrapper
 ===========
 
 Wrapper to simplify communication to an LRS. [Read more about the Experience API Spec here.](https://github.com/adlnet/xAPI-Spec/blob/master/xAPI.md)
