@@ -13,7 +13,7 @@ describe("Activity Test:", () => {
     const BAD_REQUEST = 400;
 
     // Testing module functionality
-    let should, ADL, xAPIWrapper, Activity, Statement, verbs;
+    let should, xAPIWrapper, Activity, Statement, verbs;
 
     // Test statements
     let s1, s2, s3, s4, s5;
@@ -49,15 +49,10 @@ describe("Activity Test:", () => {
         // Require necessary modules
         should = require('should');
 
-        ADL = require('./../dist/xapiwrapper.min.js');
-        // xAPIWrapper = require('./../src/xAPIWrapper');
-        // Activity = require('./../src/Object').Activity;
-        // Statement = require('./../src/Statement').Statement;
-        // verbs = require('./../src/Verbs');
-        xAPIWrapper = ADL.xAPIWrapper;
-        Activity = ADL.Activity;
-        Statement = ADL.Statement;
-        verbs = ADL.verbs;
+        xAPIWrapper = require('./../src/xAPIWrapper');
+        Activity = require('./../src/Object').Activity;
+        Statement = require('./../src/Statement').Statement;
+        verbs = require('./../src/Verbs');
 
         xAPIWrapper.changeConfig({
             "endpoint": "https://lrs.adlnet.gov/xapi/",

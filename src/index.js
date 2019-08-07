@@ -1,17 +1,29 @@
 require('babel-polyfill');
 require('../lib/cryptojs_v3.1.2.js');
+var Util = require('./Utils.js');
+var verbs = require('./Verbs.js');
+var activityTypes = require('./ActivityTypes.js');
+var Agent = require('./Agent.js').Agent;
+var Group = require('./Agent.js').Group;
+var Verb = require('./Verb.js');
+var Activity = require('./Object.js').Activity;
+var StatementRef = require('./Object.js').StatementRef;
+var Statement = require('./Statement.js').Statement;
+var SubStatement = require('./Statement.js').SubStatement;
+var xAPIWrapper = require('./xAPIWrapper.js');
+var launch = require('./xAPILaunch.js');
 
 module.exports = {
-    Util: require('./Utils.js'),
-    verbs: require('./Verbs.js'),
-    activityTypes: require('./ActivityTypes.js'),
-    Agent: require('./Agent.js').Agent,
-    Group: require('./Agent.js').Group,
-    Verb: require('./Verb.js'),
-    Activity: require('./Object.js').Activity,
-    StatementRef: require('./Object.js').StatementRef,
-    Statement: require('./Statement.js').Statement,
-    SubStatement: require('./Statement.js').SubStatement,
-    xAPIWrapper: require('./xAPIWrapper.js'),
-    launch: require('./xAPILaunch.js')
+    Util,
+    verbs,
+    activityTypes,
+    Agent,
+    Group,
+    Verb,
+    Activity,
+    StatementRef,
+    Statement,
+    SubStatement,
+    xAPIWrapper,
+    launch
 }
